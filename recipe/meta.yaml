@@ -1,5 +1,5 @@
 {% set name = "ccc" %}
-{% set version = "1.2.7" %}
+{% set version = "1.2.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/PSLmodels/Cost-of-Capital-Calculator/archive/refs/tags/{{ version }}.tar.gz
-  sha256: d5e6491d03dc83a8a04561a8a4e09144b8847dcb33a500ca85473c59c91f8171
+  sha256: c2729b5e9f554219caa8ac3f58d3dddf6748668b553b47179b50faebfc8f02a5
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -43,7 +43,7 @@ about:
   license: CC0-1.0 # see SPDX identifiers
   license_family: PUBLIC-DOMAIN
   license_file: ./docs/book/content/license.md
-  summary: "A cost of capital and effective tax rate calculator."
+  summary: A cost of capital and effective tax rate calculator.
   description: |
     A cost of capital and effective tax rate calculator.
   doc_url: http://ccc.pslmodels.org/content/intro.html
