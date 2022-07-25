@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/PSLmodels/Cost-of-Capital-Calculator/archive/refs/tags/{{ version }}.tar.gz
-  sha256: d310291492714ca4667b0bab3156d6769fca0f901cbf933c183b1806c24b536c
+  sha256: 6f5414d9170f9930d9ea7cbbf5c4e92dee60ac5f3ccb862019c29602e703a809
 
 build:
   noarch: python
