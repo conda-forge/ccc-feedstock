@@ -1,5 +1,5 @@
 {% set name = "ccc" %}
-{% set version = "1.4.0" %}
+{% set version = "1.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/PSLmodels/Cost-of-Capital-Calculator/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 3425ebfa6f188bcf363958fbf890e386ff979800c116358fe6852553f62d8d8f
+  sha256: 2d1637493372d326b680adf1d9a39e9a19a37bd104808bb0e70990fe4fb3ef58
 
 build:
   noarch: python
