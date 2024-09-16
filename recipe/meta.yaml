@@ -1,5 +1,5 @@
 {% set name = "ccc" %}
-{% set version = "1.4.1" %}
+{% set version = "1.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/PSLmodels/Cost-of-Capital-Calculator/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 2d1637493372d326b680adf1d9a39e9a19a37bd104808bb0e70990fe4fb3ef58
+  sha256: 810fe95f4ead18c60bb7cbeeb4e515e77c4b85012ca531e417a73d5efa776066
 
 build:
   noarch: python
@@ -20,10 +20,10 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >=3.6
-    - taxcalc >=3.1.0
-    - bokeh >=1.4.0
-    - paramtools >=0.18.0
+    - python >=3.10
+    - taxcalc >=4.0.0
+    - bokeh >=3.1.1
+    - paramtools >=0.18.3
 
 test:
   imports:
