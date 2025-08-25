@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "ccc" %}
 {% set version = "2.0.0" %}
 
@@ -11,21 +12,23 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - taxcalc >=4.0.0
     - bokeh >=3.1.1
     - paramtools >=0.18.3
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - ccc
     - ccc.data
