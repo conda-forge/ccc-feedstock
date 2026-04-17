@@ -1,6 +1,7 @@
-{% set python_min = '3.11' %}
 {% set name = "ccc" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
+{% set python_min = "3.11" %}
+{% set python_max = "3.14" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +9,7 @@ package:
 
 source:
   url: https://github.com/PSLmodels/Cost-of-Capital-Calculator/archive/refs/tags/{{ version }}.tar.gz
-  sha256: e08b584bd005c03f5a07130d0adf7e71c03e9a2f8b7ada0a1d0a584a272ae767
+  sha256: cc628258942dfcb344c7788aa49434cd08ce65c1e1ef950eba3f1fa835626f34
 
 build:
   noarch: python
@@ -22,7 +23,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - taxcalc >=5.2.0
+    - taxcalc >=6.0.0
     - bokeh >=3.1.1
     - paramtools >=0.20.0
 
