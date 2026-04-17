@@ -1,6 +1,7 @@
-{% set python_min = '3.11' %}
 {% set name = "ccc" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
+{% set python_min = "3.11" %}
+{% set python_max = "3.14" %}
 
 package:
   name: {{ name|lower }}
@@ -22,7 +23,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - taxcalc >=5.2.0
+    - taxcalc >=6.0.0
     - bokeh >=3.1.1
     - paramtools >=0.20.0
 
